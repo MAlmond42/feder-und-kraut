@@ -1,0 +1,98 @@
+/* app.css
+ * Author: Mats Mandelkow
+ * Contains custom colors, fonts and default styling.
+ * Influences every .html/.svelte file.
+ */
+
+
+/* Import TailwindCSS */
+@import 'tailwindcss';
+
+
+/* Custom FuK colors
+ * Now they can be used in Tailwind
+ */
+@theme {
+  --fuk-gray: #959595;
+  --fuk-bg: #f0f4ed;
+  --fuk-fg: #737373;
+  --fuk-image: #ffffff;
+  --fuk-lavender: #765988;
+  --fuk-olive: #808000;
+  --fuk-green0: #90bc8f;
+  --fuk-green1: #92a387;
+  --fuk-green2: #738767;
+}
+
+
+/* Custom fonts
+ * Natural Log for headings
+ * Franklin Gothic for normal text
+ * Neo Sans Std for sub headings
+ *
+ * Font files are located in /static/fonts/
+ */
+
+@font-face {
+  font-family: "Natural Log";
+  font-style: normal;
+  src: url("/fonts/NATLOG.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Franklin Gothic Book";
+  font-style: normal;
+  src: url("/fonts/Franklin_Gothic_Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Neo Sans Std";
+  font-style: normal;
+  src: url("/fonts/Neo_Sans_Std/NEOSANSSTD-REGULAR.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neo Sans Std";
+  font-style: italic;
+  src: url("/fonts/Neo_Sans_Std/NEOSANSSTD-ITALIC.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neo Sans Std";
+  font-style: bold;
+  src: url("/fonts/Neo_Sans_Std/NEOSANSSTD-BOLD.otf") format("opentype");
+}
+
+
+/* Default styling */
+html {
+  font-size: 20px;
+  font-family: "Franklin Gothic Book";
+}
+
+@media only screen and (max-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  background-color: var(--fuk-bg);
+}
+
+h1 {
+  font-family: "Natural Log";
+}
+
+h2 {
+  font-family: "Neo Sans Std";
+  font-style: bold;
+}
+
+.caption {
+  font-family: "Natural Log";
+}
+
+.undercap {
+  font-family: "Neo Sans Std";
+}
